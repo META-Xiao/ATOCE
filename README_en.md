@@ -34,23 +34,18 @@ K --> L
 
 # Constructing the Indeterminate Equation for the Related Chemical Equation
 For a chemical equation of the form:
-$$
- {\textstyle \sum_{i=1}^{n}x_{i}A_{i}(p)}=  {\textstyle \sum_{j=1}^{m}y_{j}B_{j}(q)} (*)
-$$
+$${\textstyle \sum_{i=1}^{n}x_{i}A_{i}(p)}=  {\textstyle \sum_{j=1}^{m}y_{j}B_{j}(q)} (*)$$
 $where A_{i}(p),B_{j}(q)represent the chemical formulas, and x_{i},y_{j} are the coefficients.$for the chemical equation(*), we might construct the following matrix:
-$$
-Matrix(A)=\begin{bmatrix}
+$$Matrix(A)=\begin{bmatrix}
  \left | A_{11} \right |  & \cdot \cdot \cdot & \left | A_{1n} \right |  & -\left|B_{11}\right | & \cdot \cdot \cdot  & -\left|B_{1m}\right |\\
  \left | A_{21} \right |& \cdot \cdot \cdot & \cdot \cdot \cdot  & \cdot \cdot \cdot & \cdot \cdot \cdot &  -\left|B_{2m}\right | \\
 \cdot \cdot \cdot &&&&&\cdot \cdot \cdot \\
  \left | A_{(c-1)1} \right | & \cdot \cdot \cdot & \cdot \cdot \cdot  & \cdot \cdot \cdot  & \cdot \cdot \cdot &  -\left|B_{(c-1)m}\right | \\
  \left | A_{c1} \right |  & \cdot \cdot \cdot & \left | A_{cn} \right |  & -\left|B_{c1}\right | & \cdot \cdot \cdot  & -\left|B_{cm}\right |
-\end{bmatrix}
- $$
+\end{bmatrix}$$
  $In the equation, \(\left|Q_{ij}\right|\) represents the number of occurrences of the \(i\)-th element that has appeared in the chemical formula \(Q()\), where \(i\) represents the sequence of elements that have appeared in the chemical equation (*), and \(j\) represents the sequence of compounds in the chemical equation (*).$
  and
-$$
-Matrix(B)=\begin{bmatrix}
+$$Matrix(B)=\begin{bmatrix}
  0\\
  \cdot \\
  \cdot \\
@@ -63,8 +58,7 @@ Matrix(B)=\begin{bmatrix}
  y_{1} \\
 \cdot \\
 y_{m}
-\end{bmatrix}
-$$
+\end{bmatrix}$$
 Thus, solving the indeterminate equation Matrix(**A**)Matrix(*x*)=Matrix(**B**) is possible. It should be noted that in this indeterminate equation, the constant matrix **B** is all zeros, and fitting with the least squares method will result in **A** being a zero vector. Therefore, it is necessary to first find the column with the fewest non-zero occurrences in the coefficient matrix **A** and move it to the constant matrix **B**, so that the indeterminate equation can be solved using the least squares method.
 
 For example, the coefficient matrix **A** for the chemical equation $x_{1}CH_{3}COOH=x_{2}CO_{2}+x_{3}H_{2}O$ is:
