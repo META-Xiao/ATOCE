@@ -34,7 +34,7 @@ class A,B,C,D,E,F,G,H,I highlight
 $其中A_{i}(p),B_{j}(q)代表化学式，x_{i},y_{j} 为系数的化学方程式(*)$  
 不妨构建以下矩阵：
 ![原系数矩阵A](./formula/Original_Coefficient_Matrix_A.svg)  
- 其中![Q_{ij}](./formula/Q_{ij}.svg)代表![Q](./formula/Q.svg)这个化学式中第i个已出现的元素的次数，i代表化学方程式(\*)中已出现元素的排序，j代表化学方程式(*)中化合物的排序。 以及：
+ 其中![Q_{ij}](./formula/Q_{ij}.svg)代表![Q](./formula/Q.svg)这个化学式中第i个已出现的元素的次数，i代表化学方程式(\*)中已出现元素的排序，j代表化学方程式(\*)中化合物的排序。 以及：
 ![matrix(B&X)](./formula/matrix(B&X).svg)
 <br>于是解不定方程Matrix(**A**)Matrix(*x*)=Matrix(**B**)即可。需要注意的是，这个不定方程中常数矩阵**B**皆为0，用最小二乘法去拟合会得到x等于一个零向量。那么必须先在系数矩阵**A**找到非零次数最少的那列，移到常数矩阵**B**中，这样才可以用最小二乘法解这个不定方程。
 
