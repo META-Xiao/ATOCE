@@ -47,7 +47,7 @@ At this time, extracting the first column gives the coefficient matrix ![A_new](
 
 ```markdown
 ## To-Do List
-
+- [ ] Identify basic hydrate chemical formulas
 - [ ] Automatically balance ionic reaction equations
   - [ ] Recognize superscript symbols on the upper right
   - [ ] Include in balancing calculation or directly balance and then check
