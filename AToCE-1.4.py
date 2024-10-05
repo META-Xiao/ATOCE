@@ -122,7 +122,7 @@ def balance_chemical_equation(equation):
 
 def main():
     balanced_equations = []
-    print("欢迎使用化学方程式配平工具(｡･∀･)ﾉﾞ例如输入：Fe2(SO4)3+NH4OH=Fe(OH)3+(NH4)2SO4。")
+    print("欢迎使用化学方程式配平工具(｡･∀･)ﾉﾞ例如输入：H2O+H2SO4+[Cu(NH3)4]SO4=(NH4)2SO4+[Cu(H2O)4]SO4。")
 
     while True: # 检查输入是否为整数
         num_equations = input("你想配平多少个化学方程式＜（＾－＾）＞？请输入个数：")
