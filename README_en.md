@@ -34,10 +34,10 @@ For a chemical equation of the form:
 <br>$Where\ A_{i}(p), B_{j}(q)\ represent \ chemical \ formulas, x_{i}, y_{j} \ are \ coefficients \ for \ the chemical \ equation (*)$
 We might construct the following matrix:
 ![Original Coefficient Matrix A](./formula/Original_Coefficient_Matrix_A.svg)  
-Where ![Q_{ij}](./formula/Q_{ij}.svg) represents the number of times the ith element that has appeared in the chemical formula ![Q](./formula/Q.svg), i represents the order of elements that have appeared in the chemical equation (\*), and j represents the order of compounds in the chemical equation (*).
+Where ![Q_{ij}](./formula/Q_{ij}.svg) represents the number of times the ith element that has appeared in the chemical formula ![Q](./formula/Q.svg), i represents the order of elements that have appeared in the chemical equation (\*), and j represents the order of compounds in the chemical equation (\*).
 And:
-![Matrix(B&X)](./formula/Matrix(B&X).svg)  
-Thus, solving the indeterminate equation Matrix(**A**)Matrix(*x*)=Matrix(**B**) is possible. It should be noted that in this indeterminate equation, the constant matrix **B** is all zeros, and fitting with the least squares method will result in x being a zero vector. Therefore, it is necessary to first find the column with the fewest non-zero occurrences in the coefficient matrix **A**, move it to the constant matrix **B**, so that the indeterminate equation can be solved using the least squares method.
+![matrix(B&X)](./formula/matrix(B&X).svg)
+<br>Thus, solving the indeterminate equation Matrix(**A**)Matrix(*x*)=Matrix(**B**) is possible. It should be noted that in this indeterminate equation, the constant matrix **B** is all zeros, and fitting with the least squares method will result in x being a zero vector. Therefore, it is necessary to first find the column with the fewest non-zero occurrences in the coefficient matrix **A**, move it to the constant matrix **B**, so that the indeterminate equation can be solved using the least squares method.
 
 For example, the coefficient matrix **A** for the chemical equation
 ![one_example](./formula/one_example.svg)is: ![one_example_A](./formula/one_example_A.svg) (The colon in front is for demonstration only)
