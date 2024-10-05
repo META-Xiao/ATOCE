@@ -45,9 +45,9 @@ def insert_coefficients(reactants, products, coefficients):
 def check_equation_format(equation):
     ''' 检查化学方程式是否含有+或= '''
     if '=' not in equation:
-        return False, "方程式没有等号（=），请检查输入。"
+        return False, "╰（‵□′）╯方程式没有等号（=），请检查输入。"
     if '+' not in equation:
-        return False, "方程式没有加号（+），请检查输入。"
+        return False, "╰（‵□′）╯方程式没有加号（+），请检查输入。"
     return True, ""
 
 def check_and_reduce_matrix(A):
@@ -90,7 +90,7 @@ def balance_chemical_equation(equation):
 
     # 检查元素是否在两边都有出现
     if reactant_elements != product_elements:
-        return None, "方程式左右两边元素不守恒，请检查元素是否在两边都有出现。"
+        return None, "(´。＿。｀)方程式左右两边元素不守恒，请检查元素是否在两边都有出现。"
 
     # 构建系数矩阵
     A = []
@@ -122,19 +122,27 @@ def balance_chemical_equation(equation):
 
 def main():
     balanced_equations = []
-    num_equations = int(input("你想配平多少个化学方程式？请输入个数："))
-    
+    print("欢迎使用化学方程式配平工具(｡･∀･)ﾉﾞ例如输入：Fe2(SO4)3+NH4OH=Fe(OH)3+(NH4)2SO4。")
+
+    while True: # 检查输入是否为整数
+        num_equations = input("你想配平多少个化学方程式＜（＾－＾）＞？请输入个数：")
+        try :
+            num_equations = int(num_equations)
+            break
+        except ValueError:
+            print("╰（‵□′）╯请输入一个有效的整数。")
+
     for i in range(num_equations):
         print(f"\n第 {i+1} 个化学方程式：")
         while True:
             chemical_equation = input("请输入：")
             valid, error_message = check_equation_format(chemical_equation)
             if not valid:
-                print(f"错误：{error_message}\n请重新输入。")
+                print(f"ヾ(≧へ≦)〃错误：{error_message}\n请重新输入。")
                 continue
             coefficients, balanced_equation_or_error = balance_chemical_equation(chemical_equation)
             if coefficients is None:
-                print("错误：无法识别的化学式\n请重新输入。")
+                print("ヾ(≧へ≦)〃错误：无法识别的化学式\n请重新输入。")
                 continue
             balanced_equations.append(balanced_equation_or_error)
             break
@@ -143,7 +151,7 @@ def main():
     for eq in balanced_equations:
         print(eq)
     
-    input("\n按回车键退出程序。")
+    input("\n按回车键退出程序( ﾟдﾟ)つBye。")
 
 if __name__ == "__main__":
     main()
