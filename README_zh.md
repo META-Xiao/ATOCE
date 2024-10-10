@@ -30,7 +30,7 @@ class A,B,C,D,E,F,G,H,I highlight
 
 # 构建相关化学方程式的不定方程
 对于一个形如：  ![化学方程式统一表达](./formula/化学方程式统一表达.svg)  
-$其中A_{i}(p),B_{j}(q)代表化学式，x_{i},y_{j} 为系数的化学方程式(*)$  
+其中$A_{i}(p),B_{j}(q)$代表化学式，$x_{i},y_{j}$ 为系数的化学方程式(\*)  
 不妨构建以下矩阵：
 ![原系数矩阵A](./formula/Original_Coefficient_Matrix_A.svg)  
  其中![Q_{ij}](./formula/Q_{ij}.svg)代表![Q](./formula/Q.svg)这个化学式中第i个已出现的元素的次数，i代表化学方程式(\*)中已出现元素的排序，j代表化学方程式(*)中化合物的排序。 以及：
@@ -59,5 +59,5 @@ $其中A_{i}(p),B_{j}(q)代表化学式，x_{i},y_{j} 为系数的化学方程�
 ```
 
 # 使用
-在python环境下[AToCE-1.4.py](./AToCE-1.4.py)文件中运行即可。  
-无python环境下[AToCE-1.4.exe](./dist/AToCE-1.4.exe)文件中运行即可。
+在python环境下[AToCE-1.5.py](./AToCE-1.5.py)文件中运行即可。  
+无python环境下[AToCE-1.5.exe](./dist/AToCE-1.4.exe)文件中运行即可。
